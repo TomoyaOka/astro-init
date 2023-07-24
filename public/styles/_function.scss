@@ -1,0 +1,50 @@
+/*----------------------
+  初期設定
+-------------------------*/
+html {
+  font-size: calc(10 / 1440 * 100vw);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  overflow-x: hidden !important;
+
+  @include mq(xl) {
+    font-size: calc(10 / 1440 * 100vw);
+  }
+  @include mq(md) {
+    font-size: 62.5%;
+  }
+  @include mq(sm) {
+    font-size: 58%;
+  }
+}
+
+body {
+  width: 100%;
+  max-width: 2700px;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100svh;
+  background-color: var(--bg-color);
+  font-feature-settings: "palt";
+  font-size: var(--sm);
+  color: #333;
+  position: relative;
+  overscroll-behavior: none;
+  margin: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  @include mq(md) {
+    overflow-x: hidden;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: #333;
+}
