@@ -1,16 +1,16 @@
 ---
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
-import ogpImage from "/ogp.jpg"
-interface Props {
-	title: string;
-}
+import ogpImage from "../images/ogp.jpg";
+import "../styles/reset.scss";
+import "../styles/functions.scss";
+// import "../styles/_function.scss";
 
 const { title } = Astro.props;
 
 //OGP
 // const socialImageURL = new URL(Astro.url.pathname, Astro.site);
-const product_site = "https://tomoyaoka.github.io/astro-init/";
+const product_site = "";
 const ogpImageURL = `${product_site}ogp.jpg`;
 
 const siteUrl =  Astro.site;
@@ -33,20 +33,13 @@ const twitterCard:string = "summary_large_image";
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={siteDiscription} />
     <meta property="og:site_name" content={siteTitle} />
-    <meta property="og:image" content={ ogpImageURL} />
+    <meta property="og:image" content={ogpImage} />
     <meta name="twitter:card" content={twitterCard} />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={siteDiscription} />
-    <meta name="twitter:image" content={ ogpImageURL} />
+    <meta name="twitter:image" content={ogpImage} />
     <!-- / -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<!-- global-style -->
-		<link rel="stylesheet" href="../styles/_reset.scss">
-		<link rel="stylesheet" href="../styles/setting.scss">
-		<link rel="stylesheet" href="../styles/_function.scss">
-		<link rel="stylesheet" href="../styles/_mixin.scss">
-		<link rel="stylesheet" href="../styles/_common-class.scss">
-		<!-- / -->
 
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>

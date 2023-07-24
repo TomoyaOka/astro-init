@@ -15,5 +15,10 @@ import MvSec from "../components/project/MvSection.astro";
 </script>
 
 <style lang="scss">
-
+@import "../styles/setting.scss";
+p {
+	@include mq(md) {
+		font-size:10px;
+	}
+}
 </style>
